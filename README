@@ -1,0 +1,137 @@
+Image::ThousandWords version 0.06
+=================================
+
+NAME
+    Image::ThousandWords - convert an image to colored HTML text
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+SYNOPSIS
+            use Image::ThousandWords;
+            my $html = Image::ThousandWords::html(
+                    image_path      => 'image.jpg',
+                    text            => 'TurnMeIntoAnImage',
+            };
+            print "<html><body bgcolor='white'>$html</body></html>\n\n";
+            exit;
+
+DESCRIPTION
+    This module is designed to take as input the path to an image file, and
+    a string of text, and return an HTML colored text, resembling the image
+    made out of the string, repeated as necessary.
+
+    Henning Møller-Nielsen wrote the original, Lee Goddard modified it
+    slightly.
+
+    Henning said,
+
+            The inspiration I got from http://www4.telge.kth.se/~d99_kme/
+            look at http://rto.dk/images/camel.html or http://rto.dk/images/llama.html for the first versions
+            (and I look like this: http://rto.dk/images/henning.htm)
+
+    Lee adds:
+
+            Modified by Lee Goddard (lgoddard-at-cpan.org) 2003, and again 15 February 2004
+            - I did send Henning the mod, but he didn't publish it; I lost it, rewrote it
+            and didn't want to re-write it again
+
+DEPENDENCIES
+            Carp
+            GD
+            Image::Thumbnail
+            HTML::Entities
+
+FUNCTION html
+    Returns a HTML formatted string, colored to resemble IMAGE. The string
+    consists of the letters and characters from STRING.
+
+    Accepts parameters as a hash, list or hash-reference:
+
+    image_path
+        Path to the file to convert. Must be openable by your version of GD.
+        If you don't supply this, you must supply "thumb" as a GD image.
+
+    thumb
+        If you do not supply "image_path" (above), you must supply this as a
+        loaded GD image.
+
+    text
+        Text to use in conversion of the "file". Default is
+        "aPictureIsWorthAThousandWords", so you'd better supply your own.
+        Note that whitesapce will be stripped.
+
+    font_face
+        String to use in the HTML, which will be quoted in "double-quotes".
+        Defaults to 'Arial Black','Lucida Console','Courier New', Courier'.
+
+    font_size
+        Number of pixels for the size of the font used: default is 8.
+
+    line_height
+        Number of pixels for the height of a line of text. Default value is
+        two pixels less than the "font_size".
+
+    scanline_skip
+        The number of scan-lines or rows to skip jump in each read of the
+        image. The default is to read every line, which is a "scanline_skip"
+        of 1 - not a very clear name, sorry. Check the relation of this to
+        the "line_height" parameter, above.
+
+BACKWARDS COMPARABILITY
+    The original "ThousandWords" module's "giveme" method is still
+    acceptable.
+
+EXAMPLES FROM HENNING:
+    Made with the v. 0.01 (just a script, inspired by
+    http://www4.telge.kth.se/~d99_kme/)
+
+            http://rto.dk/images/camel.html
+            http://rto.dk/images/llama.html
+            http://rto.dk/images/henning.html (me)
+
+    Made with the v. 0.03
+
+            http://rto.dk/images/neptune.html
+            http://rto.dk/images/mars.html
+            http://rto.dk/images/pluto_charon.html
+            http://rto.dk/images/earth.html
+            http://rto.dk/images/saturn.html
+            http://rto.dk/images/jupiter.html (here the reason for v. 0.04 is apparent)
+            http://rto.dk/images/ira1.html
+            http://rto.dk/images/ira2.html (my colleagues)
+
+KNOWN BUGS
+    None, from a perl perspective. From an image perspective things look
+    different :-)
+
+AUTHOR ETC.
+    Henning Michael Møller-Nielsen, hmn -at- datagraf.dk
+
+    Slightly modified by Lee Goddard, lgoddard -at- cpan.org
+
+VERSION HISTORY
+    A bit of an overkill, but hey - this is Fun!
+
+    0.01 Not really a module, just a script 0.02 'ThousandWords.pm' came to
+    life 0.03 Fixed an error so the first text in a black image wouldn't be
+    white 0.04 Fixed an error so the first text in a black image wouldn't be
+    larger than the rest and so spaces no longer would be used 0.05 Ah -
+    added POD 0.06 Re-sizing of image and new access means added by Lee
+
+    Future:
+
+            ANSI colored text?
+            Resizing of image? - done by lee (twice)
+
+SEE ALSO
+    ThousandWords
+	GD
+
+Tool completed successfully

@@ -1,0 +1,13 @@
+Revision history for Perl extension Image::ThousandWords.
+
+0.01	Not really a module, just a script
+0.02	'ThousandWords.pm' came to life
+0.03	Fixed an error so the first text in a black image wouldn't be white
+0.04	Fixed an error so the first text in a black image wouldn't be larger
+		than the rest and so spaces no longer would be used
+0.05	Ah - added POD
+
+0.06	Sun Feb 15 17:47:15 2004
+		- created by h2xs 1.21 with options	-Xn Foo
+		Re-sizing of image and new access means added by Lee
+
