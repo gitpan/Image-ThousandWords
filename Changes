@@ -7,7 +7,12 @@ Revision history for Perl extension Image::ThousandWords.
 		than the rest and so spaces no longer would be used
 0.05	Ah - added POD
 
-0.06	Sun Feb 15 17:47:15 2004
+0.06	Sat Feb 15 17:47:15 2004
 		- created by h2xs 1.21 with options	-Xn Foo
 		Re-sizing of image and new access means added by Lee
 
+0.07	Sun Feb 16 16:11:00 2004
+		Sod it - full OO interface, more re-sizing, line-feeds/whitespace
+
+0.08	Sun Feb 16 16:21:00 2004
+		Fixed MANIFEST for test.pl

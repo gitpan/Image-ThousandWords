@@ -1,7 +1,7 @@
 package Image::ThousandWords;
 
 our $NAME	= 'Image::ThousandWords';
-our $VERSION	= '0.07';
+our $VERSION	= '0.08';
 our $CHAT = 1;
 
 =head1 NAME
@@ -391,6 +391,8 @@ A bit of an overkill, but hey - this is Fun!
 		than the rest and so spaces no longer would be used
 0.05	Ah - added POD
 0.06	Lee added: re-sizing of image; new access method; proper HTML entities
+0.07	Sod it - full OO interface, more re-sizing, line-feeds/whitespace
+0.08	Fixed MANIFEST for test.pl
 
 Future:
 
