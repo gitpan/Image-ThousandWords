@@ -1,0 +1,22 @@
+--- #YAML:1.0
+name:               Image-ThousandWords
+version:            0.09
+abstract:           convert an image to colored HTML text
+author:
+    - Lee Goddard <lgoddard-at-cpan.org> and Henning Møller-Nielsen <hmn-at-datagraf.dk> 
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    GD:                0.01
+    Image::Size:       0
+    Image::Thumbnail:  0.01
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.48
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4

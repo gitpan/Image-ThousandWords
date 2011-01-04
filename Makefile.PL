@@ -5,8 +5,9 @@ WriteMakefile(
     'NAME'		=> 'Image::ThousandWords',
     'VERSION_FROM'	=> 'ThousandWords.pm', # finds $VERSION
     'PREREQ_PM'		=> {
-		Image::Thumbnail	=> 0.01,
-		GD				=> 0.01,
+	Image::Size		=> 0,	
+	Image::Thumbnail	=> 0.01,
+	GD			=> 0.01,
 	}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM => 'ThousandWords.pm', # retrieve abstract from module

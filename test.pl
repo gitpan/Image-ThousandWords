@@ -1,4 +1,4 @@
-use Test::More tests => 10;
+use Test::More tests => 22;
 use strict;
 use warnings;
 
@@ -40,7 +40,7 @@ ok (defined $html, "Turn the image into coloured HTML rows of the letter X");
 		font_size  => 32,
 		size	=> 20,
 	);';
-	ok (length($html) ==0, 'Got a bad result, good');
+	is ($html,undef, 'Got a bad result, good');
 }
 
 $html = Image::ThousandWords::html(
@@ -168,39 +168,8 @@ ok (defined $html, "Got HTML");
 
 
 # Display in windows
-sub show { my $html = shift;
-	return unless defined $html;
-	if ($^O =~ /win/i){
-		warn "# Displaying in default HTML viewer...\n";
-		open OUT, ">out.html";
-		print OUT "<html>
-		<head><title>Image::ThousandWords</title></head>
-		<body style='letter-spacing:1px;' bgcolor=black>$html</body>
-		</html>\n";
-		close OUT;
-		warn "# Done\n";
-
-		`start out.html`;
-		warn "# Pausing ...\n";
-		sleep 4; # wait for windows....
-#		unlink 'out.html';
-		warn "# OK\n";
-	}
+sub show {
 }
 
-sub show_page { my $html = shift;
-	return unless defined $html;
-	if ($^O =~ /win/i){
-		warn "# Displaying in default HTML viewer...\n";
-		open OUT, ">out.html";
-		print OUT $html;
-		close OUT;
-		warn "# Done\n";
-
-		`start out.html`;
-		warn "# Pausing ...\n";
-		sleep 4; # wait for windows....
-#		unlink 'out.html';
-		warn "# OK\n";
-	}
+sub show_page {
 }

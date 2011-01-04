@@ -1,8 +1,8 @@
 package Image::ThousandWords;
 
 our $NAME	= 'Image::ThousandWords';
-our $VERSION	= '0.08';
-our $CHAT = 1;
+our $VERSION	= '0.09';
+our $CHAT = undef;
 
 =head1 NAME
 
@@ -78,9 +78,7 @@ use Image::Thumbnail;
 use HTML::Entities;
 use Image::Size;
 
-# PRIVATE CONSTRUCTOR new
 # Returns an object blessed into this class
-
 sub new { my $class = shift;
 	die unless defined $class and not ref $class;
 	my $self = bless {}, $class;
