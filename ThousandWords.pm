@@ -1,7 +1,7 @@
 package Image::ThousandWords;
 
 our $NAME	= 'Image::ThousandWords';
-our $VERSION	= '0.09';
+our $VERSION	= '0.10';
 our $CHAT = undef;
 
 =head1 NAME

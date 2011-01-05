@@ -7,6 +7,7 @@ WriteMakefile(
     'PREREQ_PM'		=> {
 	Image::Size		=> 0,	
 	Image::Thumbnail	=> 0.01,
+	HTML::Entities		=> 0.01,
 	GD			=> 0.01,
 	}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005

@@ -16,3 +16,11 @@ Revision history for Perl extension Image::ThousandWords.
 
 0.08	Sun Feb 16 16:21:00 2004
 		Fixed MANIFEST for test.pl
+
+0.09	2011-01-03
+	Depends
+
+0.10	2011-01-04
+	Depends
+
+
